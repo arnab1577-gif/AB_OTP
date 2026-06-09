@@ -339,7 +339,6 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     else:
         await update.message.reply_text(f"Selected / সিলেক্ট করেছেন: **{text}**")
 
-def main():
     def main():
     app = Application.builder().token(BOT_TOKEN).build()
     
@@ -352,3 +351,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

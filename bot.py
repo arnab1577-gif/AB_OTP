@@ -340,12 +340,13 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(f"Selected / সিলেক্ট করেছেন: **{text}**")
 
 def main():
+    def main():
     app = Application.builder().token(BOT_TOKEN).build()
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(set_bot_description(app))
+    
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(handle_callback))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+    
     print("Dual Language Premium Bot is running successfully...")
     app.run_polling()
 
